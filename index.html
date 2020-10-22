@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta charset="utf-8">
-        <script src="script.js"></script>
+        <meta charset="utf-8">        
+        <script defer src="script.js"></script>
         <link rel="stylesheet" href="styles.css">
-        <title>Vanilla To Do</title>        
+        <title>Vanilla To Do`s</title>        
     </head>
     <body>
-        <div id="main_div">
-            <form>
-                <p>Your ToDo`s</p>
-                <div class="container"><div class="box" ><div class="el_ch"><input type="checkbox" id="first_checkbox"/></div> <div class="el_tx">First_CheckBox</div></div></div>
-                <div class="container"><div class="box"><div class="el_ch"><input type="checkbox" id="two_checkbox"/></div> <div class="el_tx">Two_CheckBox</div></div></div>
-                <div class="container"><div class="box"><div class="el_ch"><input type="checkbox" id="three_checkbox"/></div> <div class="el_tx">Three_CheckBox</div></div></div>
-                <div class="container"><div class="box"><div class="el_ch"><input type="checkbox" id="four_checkbox"/></div> <div class="el_tx">Four_CheckBox</div></div></div>
-            </form>
-        </div>
+        <div class="container">
+            <h1>Your ToDo`s</h1>    
+            <div class="todos">                
+            </div>    
+            <div class="todo-form">
+                <input type="text" class="todo-input" placeholder="Text new item">
+                <div class="colors">                   
+                </div>
+                <button data-type="todo-button" type="button" class="todo-button">
+                    Add
+                </button>
+            </div>    
+        </div>        
     </body>
 </html>

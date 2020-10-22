@@ -1,43 +1,122 @@
-#main_div {
-    text-align: center;
-    align-content: center;
-    vertical-align: middle;
-    color: green;
-    margin-top: 100px;
+
+*{
+    box-sizing: border-box;
 }
-
-.el_ch {
-    
-    
-    
-     border: red; 
-     padding: 10px 5%; 
-    border-width: 4px; 
-     margin: 10px 1px;
-    background-color: salmon; 
-} 
-
-.el_tx {
-    
-   
-    
-    border: red; 
-     padding: 10px 5%; 
-     border-width: 4px;
-     margin: 10px 1px;
-    background-color: purple; 
+html{
+  
+  font-size: 16px;
 }
-
-.box{
-    white-space:nowrap
+body{
+    margin-top: 150px;    
+    padding: 0;
 }
-
+h1{
+    font-weight: normal;
+}
 .container{
-    overflow:hidden; width:500px; height: 50px;
+    text-align: center;
+    width: 550px;
+    margin: 0 auto;
 }
 
-.box div{
-    width:100px; display:inline-block; border:1px solid black
+.todo{
+    display: flex;
+    margin: 3px 0;
+}
+.todo p{
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 10px;
+    min-height: 50px;
+    width: 100%;
+}
+.todo p:last-child{
+    margin-left: 2px;
+    padding-left: 10px;
+}
+.todo .checkbox{
+    width: 50px;
+    position: relative;
+
+    justify-content: center;
 }
 
 
+
+
+.todo-form{
+    margin-top: 25px;
+    border-radius: 1px;
+    padding: 10px 5px;
+    border: 1px solid rgb(209, 208, 208);
+
+    display: flex;
+    justify-content: space-around;
+}
+.todo-input{
+    border: none;
+
+    font-size: inherit;
+
+    flex: 0 0 50%;
+}
+.todo-input:focus{
+    outline: none;
+}
+.todo-button{
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+
+    background-color: darkcyan;
+    color: white;
+
+    font-size: inherit;
+
+    flex: 0 0 10%;
+    align-self: center;
+}
+.colors{
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    flex: 0 0 35%;
+}
+.colors > *{
+    margin: 2px;
+}
+.colors label{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+}
+input[type=radio]:checked + label{
+    border: 2px solid darkorange;
+    box-shadow: inset 0 0 3px white;
+}
+.todos label{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: #fff;
+    color: white;
+}
+.todos input:checked + label:before{
+    content: 'ok';
+    position: absolute;
+    top: 14px;
+    left: 17px;
+    
+}
+.todos input:checked + label{
+    
+    background-color: green;
+}
+
+.colors input[type=radio], .todos input[type=checkbox]{
+    display: none;
+}
